@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Function</h1>
+    <script>
+        function sayHallo() {
+            document.write('Hello Folks!!');
+        }
+
+        sayHallo();
+        sayHallo();
+    </script>
+    <br>
+
+    <script>
+       function sayHallo(firstname, lastname) {
+            document.write(`Hello` +firstname+ ` ` +lastname+ `</br>`);
+        }
+
+        sayHallo(' Razif', 'Fadhil Akbar');
+        sayHallo(' Razif', 'Fadhil Akbar');  
+
+    </script>
+    <br>
+    <h1>Arrow Function</h1>
+    <script>
+        const greet = (name) => {
+            document.write(`nama` + name + "!");
+        };
+
+        greet(" Charlie");
+    </script>
+    <br>
+    <h1>Function Closure</h1>
+    <script>
+        function outerFunction(outerVariable) {
+            return function innerFunction(innerVariable) {
+                document.write("Outer Variable: " + outerVariable);
+                document.write("Inner Variable: " + innerVariable);
+            };
+        }
+        const newFunction = outerFunction("Outer");
+        newFunction("Inner");
+        newFunction("Outer");
+    </script>
+    <br>
+</body>
+</html>
